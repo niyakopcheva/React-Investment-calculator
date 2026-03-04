@@ -1,19 +1,11 @@
-import { useState } from "react";
-
-function UserInput() {
-    const [userValues, setUserValues] = useState({
-        initialInvestment: 0,
-        annualInvestment: 0,
-        expectedReturn: 0,
-        duration: 0
-    });
+function UserInput({ userValues, setUserValues }) {
 
     function handleInputChange(event, field) {
         let newValues = { ...userValues };
-        newValues[field] = event.target.value;
+        newValues[field] = Number(event.target.value);
 
         setUserValues(newValues);
-        console.log(userValues);
+        // console.log(userValues);
     }
 
     return (
