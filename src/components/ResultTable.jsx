@@ -19,7 +19,10 @@ function ResultTable({ userData }) {
                 </tr>
             </thead>
             <tbody>
-                <TableRow yearData={investmentResults[0]} initialInvestment={userData.initialInvestment} />
+                {investmentResults.map(yData =>
+                    <TableRow yearData={yData} initialInvestment={userData.initialInvestment} key={yData.year} />
+                )}
+
             </tbody>
         </table>
     )

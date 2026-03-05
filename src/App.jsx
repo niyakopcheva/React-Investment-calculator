@@ -4,10 +4,10 @@ import ResultTable from "./components/ResultTable";
 
 function App() {
   const [userValues, setUserValues] = useState({
-    initialInvestment: 0,
-    annualInvestment: 0,
-    expectedReturn: 0,
-    duration: 0
+    initialInvestment: null,
+    annualInvestment: null,
+    expectedReturn: null,
+    duration: null
   });
 
   return (
